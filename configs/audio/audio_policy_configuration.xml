@@ -390,7 +390,7 @@
                        sources="Wired Headset Mic,BT SCO Headset Mic,FM Tuner,USB Device In,USB Headset In,Telephony Rx"/>
                 <!--import xiaomi Preset(scenario select) patch end-->
 
-                <!-- Custom Bluetooth Routes Declaration for Dolby Processing -->
+                <!-- Custom Bluetooth Routes Declaration for Dolby Processing (FIX) -->
                 <route type="mix" sink="BT A2DP Out"
                        sources="primary output,deep_buffer,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT A2DP Headphones"
