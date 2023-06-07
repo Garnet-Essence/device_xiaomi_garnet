@@ -177,6 +177,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
+# Dexpreopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    TrebuchetQuickStep \
+    Settings \
+    SystemUI
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
