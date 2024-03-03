@@ -70,6 +70,12 @@ function blob_fixup() {
         vendor/etc/media_codecs_parrot_v0.xml)
             sed -i -E '/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d' "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            [ "$2" = "" ] && return 0
+            sed -i '/gettid: 1/d' "${2}"
+            sed -i '/^[[:space:]]*$/d' "${2}"
+            echo "gettid: 1" >> "${2}"
+            ;;   
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/dolby/!p' "${2}"
             ;;
