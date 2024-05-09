@@ -630,3 +630,7 @@ on property:sys.volume.stream.bluetoothsco=*
     
 # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
+    
+# Disable statsd service to prevent additional battery drain
+    stop statsd
+
