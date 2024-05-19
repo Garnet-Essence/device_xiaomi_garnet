@@ -392,9 +392,9 @@
 
                 <!-- Custom Bluetooth Routes Declaration for Dolby Processing (FIX) -->
                 <route type="mix" sink="BT A2DP Out"
-                       sources="primary output,deep_buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep_buffer,compressed_offload,voip_rx,spatial output"/>
                 <route type="mix" sink="BT A2DP Headphones"
-                       sources="primary output,deep_buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep_buffer,compressed_offload,voip_rx,spatial output"/>
                 <route type="mix" sink="BT A2DP Speaker"
                        sources="primary output,deep_buffer,compressed_offload,voip_rx"/>
             </routes>
