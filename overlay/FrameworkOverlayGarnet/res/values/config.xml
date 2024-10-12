@@ -998,4 +998,7 @@
         <item>"/system_ext/priv-app/DaxUI/DaxUI.apk"</item>
         <item>"/system_ext/priv-app/daxService/daxService.apk"</item>
     </string-array>
+
+    <!-- Turbulence effect -->
+    <bool name="config_mediaControlsTurbulenceByDefault">false</bool>
 </resources>
