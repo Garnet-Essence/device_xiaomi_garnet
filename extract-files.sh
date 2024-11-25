@@ -76,6 +76,10 @@ function blob_fixup() {
         vendor/lib64/vendor.libdpmframework.so)
             "${PATCHELF_0_17_2}" --add-needed "libhidlbase_shim.so" "${2}"
             ;;      
+        vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;              
     esac
 }
 
