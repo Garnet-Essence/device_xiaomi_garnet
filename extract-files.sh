@@ -96,6 +96,12 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;              
+        vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service)
+            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            ;;
+        vendor/lib64/hw/audio.primary.parrot.so)
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            ;;    
     esac
 }
 
